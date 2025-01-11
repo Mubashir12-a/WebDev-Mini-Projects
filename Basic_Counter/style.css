@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+#container {
+  background-color: white;
+  backdrop-filter: blur(5px);
+  height: 50vh;
+  width: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+#container p {
+  font-size: 5vh;
+  font-weight: bold;
+  background-color: #222222;
+  color: red;
+  width: 95%;
+  height: 30%;
+  margin: 5px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+#btns {
+  background-color: #fff;
+  height: 65%;
+  width: 95%;
+  margin: 0 0 2% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#btns button {
+  all: initial;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 5vh;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid white;
+}
+
+#btns button:nth-child(3) {
+  background-color: red;
+  color: black;
+  grid-column: 1 / -1;
+}
+
+#btns button:nth-child(5) {
+  background-color: skyblue;
+  color: black;
+  letter-spacing: 1vh;
+}
+
+input {
+  border: none;
+  background-color: #111222;
+  color: white;
+  width: 100%;
+  font-size: 5vh;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+#btns button:active {
+  opacity: 0.8;
+  transform: scale(0.9);
+}
+
+@media (max-width: 750px) {
+  body {
+    height: 50vh;
+    margin: 50% 0;
+  }
+}
