@@ -4,6 +4,9 @@ let AddBtn = document.getElementById("AddList");
 let InputText = document.getElementById("InputTag");
 let Limit, trigger, IDFind = 1;
 let CountUpt = document.getElementById("countAlpha");
+let AlertMsg = document.getElementById("ErrMsg");
+let AlertImg = document.getElementById("AlertImg");
+let PlaceHolder = document.getElementById("InputPlaceHolder");
 
 
 InputText.addEventListener('input', () => {
@@ -11,11 +14,20 @@ InputText.addEventListener('input', () => {
     let velChk = InputText.value;
     let Len = velChk.length;
     Limit = Limit - Len;
+    
 
-    if(Len > 100){
-        trigger = confirm("Limit-Reached Only 100 Alphabets will be considered In list");
+    if((velChk.trim(" ")).length > 100){
+      AlertImg.style.opacity = "1";
+      AlertMsg.textContent = "Limit Reached";
+      InputText.value = InputText.value.slice(0,100);
     }else{
-      CountUpt.textContent = Limit;
+      if(Limit >= 0 && Limit <= 100){
+        CountUpt.textContent = Limit;
+      }
+
+      AlertImg.style.opacity = "0";
+      AlertMsg.textContent = "";
+      InputText.style.height = InputText.scrollHeight + "px";
     }
 })
 
@@ -42,18 +54,18 @@ function AddNewEle(){
 
         contBox.appendChild(Cont);
         InputText.value = "";
-        InputText.setAttribute("placeholder", "Enter Text Please");
     }else{
-        InputText.setAttribute("placeholder", "Enter Text Please");
-        InputText.animate([
+      PlaceHolder.style.color = "red";
+        PlaceHolder.innerText = "Please Write First";
+        PlaceHolder.animate([
             {transform : "translateX(0%)"},
-            {transform : "translateX(55%)"},
+            {transform : "translateX(5%)"},
             {transform : "translateX(0%)"},
-            {transform : "translateX(55%)"},
+            {transform : "translateX(10%)"},
             {transform : "translateX(0%)"}
         ],{
-            duration: 1000,
-            iterations: 1,
+            duration: 200,
+            iterations: 2,
             easing: "ease-in-out"
         })
 

@@ -30,25 +30,64 @@
     width: 15%;
     border-radius: 3px;
     background-color: orange;
-    color: white;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 4vh;
   }
 
   #InputTag {
     width: 90%;
-    height: 50px;
+    height: 8vh;
+    overflow: hidden;
     outline: none;
     background-color: transparent;
     border: none;
     color: white;
     font-size: 3vh;
-    padding: 0 0.5em;
+    padding: 0.5em 0.5em;
     letter-spacing: 1px;
+    resize: none;
+  }
+
+  #InputPlaceHolder {
+    background-color: black;
+    position: absolute;
+    top: -20%;
+    left: 1vh;
+    border-left: 2px solid gold;
+    border-right: 2px solid gold;
+    padding: 0 2%;
+    color: rgba(255, 255, 255, 0.478);
+    transition: all 0.5s;
   }
   
   #countAlpha {
     position: absolute;
     top: 110%;
     color: rgba(255, 255, 255, 0.427);
+  }
+
+  #AlertMessage {
+    color: red;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #AlertMessage img {
+    height: 80%;
+    margin: 0 1%;
+    opacity: 0;
+  }
+
+  #ErrMsg {
+    letter-spacing: 2px;
   }
 
   #List {
@@ -152,5 +191,13 @@
 
     #InputTag {
       font-size: 3vw;
+    }
+
+    #Input button {
+      font-size: 3vw;
+    }
+
+    #InputPlaceHolder {
+      left: 1vw;
     }
   }
