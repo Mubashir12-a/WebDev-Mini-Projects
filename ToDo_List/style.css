@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+    appearance: none;
+  }
+
+  body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+  }
+
+  #Input {
+    border: 2px solid gold;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  #Input button {
+    width: 10%;
+    border-radius: 3px;
+  }
+
+  #InputTag {
+    width: 90%;
+    height: 25px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 3vh;
+    padding: 0 0.5em;
+    letter-spacing: 1px;
+  }
+  
+  #countAlpha {
+    position: absolute;
+    top: 110%;
+    color: rgba(255, 255, 255, 0.427);
+  }
+
+  #List {
+    /*background-color: white;*/
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0.5em;
+    margin-top: 50px;
+  }
+
+  #List div {
+    background-color: #222222;
+    color: white;
+    width: 90vw;
+    height: 8vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 2vh;
+    font-size: 4vh;
+    margin-bottom: 10px;
+    border: 2px solid red;
+  }
+
+  #List label {
+      display: flex;
+  }
+
+  #List div input[type="checkbox"] {
+    appearance: none;
+    height: 60%;
+    width: 4.5vh;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  #List div input[type="checkbox"]:checked {
+    background: url("https://www.shutterstock.com/image-vector/check-mark-icon-color-editable-600nw-2474013721.jpg");
+    background-size: contain;
+  }
+
+  input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    text-decoration-color: greenyellow;
+    color: rgba(255, 255, 255, 0.311);
+    transition: All 0.5s;
+  }
+
+  #List div button {
+    height: 90%;
+    width: 8vh;
+    margin-right: 3px;
+    border-radius: 50%;
+    font-size: 5vh;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  @media (max-width: 750px) {
+    #List div {
+      width: 90vw;
+      height: 8vw;
+      padding: 0 0 0 2vw;
+      font-size: 4vw;
+    }
+
+    #List div input[type="checkbox"] {
+      height: 60%;
+      width: 5%;
+    }
+
+    #Input button {
+      width: 20%;
+    }
+
+    #InputTag {
+      width: 80%;
+    }
+
+    #List div button {
+      width: 8vw;
+      font-size: 5vw;
+    }
+
+    #InputTag {
+      font-size: 3vw;
+    }
+  }
