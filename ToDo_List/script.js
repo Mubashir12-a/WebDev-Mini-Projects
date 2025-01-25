@@ -21,6 +21,9 @@ InputText.addEventListener('input', () => {
 
 
 function AddNewEle(){
+  CountUpt.textContent = 100;
+
+
   let labelList = document.createElement("label");
     labelList.textContent = InputText.value;
 
@@ -30,7 +33,6 @@ function AddNewEle(){
         InputBox.type = "checkbox";
         let BtnDel = document.createElement("button");
         BtnDel.classList.add("Del-btn");
-        BtnDel.textContent = "x";
 
         Cont.appendChild(InputBox);
         Cont.appendChild(labelList);

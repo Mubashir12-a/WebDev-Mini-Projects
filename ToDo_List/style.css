@@ -27,13 +27,15 @@
   }
 
   #Input button {
-    width: 10%;
+    width: 15%;
     border-radius: 3px;
+    background-color: orange;
+    color: white;
   }
 
   #InputTag {
     width: 90%;
-    height: 25px;
+    height: 50px;
     outline: none;
     background-color: transparent;
     border: none;
@@ -60,16 +62,16 @@
   }
 
   #List div {
-    background-color: #222222;
-    color: white;
+    background-color: #ffffff80;
+    color: black;
     width: 90vw;
-    height: 8vh;
+    height: 6vh;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0 0 2vh;
-    font-size: 4vh;
+    font-size: 3vh;
     margin-bottom: 10px;
     border: 2px solid red;
   }
@@ -84,30 +86,41 @@
     width: 4.5vh;
     background-color: white;
     cursor: pointer;
+    border-radius: 20px;
   }
 
   #List div input[type="checkbox"]:checked {
     background: url("https://www.shutterstock.com/image-vector/check-mark-icon-color-editable-600nw-2474013721.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
   }
 
   input[type="checkbox"]:checked + label {
     text-decoration: line-through;
-    text-decoration-color: greenyellow;
+    text-decoration-color: red;
     color: rgba(255, 255, 255, 0.311);
     transition: All 0.5s;
   }
 
   #List div button {
-    height: 90%;
-    width: 8vh;
-    margin-right: 3px;
-    border-radius: 50%;
+    height: 100%;
+    width: 10vh;
+    margin-right: 2vw;
     font-size: 5vh;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    background: url("Del_img.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  #List div button:active {
+    transform: scale(0.8);
+    transition: 0.5s;
   }
 
 
@@ -133,7 +146,7 @@
     }
 
     #List div button {
-      width: 8vw;
+      width: 10vw;
       font-size: 5vw;
     }
 
