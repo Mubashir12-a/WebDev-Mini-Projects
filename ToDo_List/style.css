@@ -2,6 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.5s;
+  }
+
+  :root {
+    --bg : black;
+    --bg_2 : white;
+    --TextBlk : black;
+    --TextWhite : white;
+    --TextListBlk : rgba(255, 255, 255, 0.478);
+    --PlaceHolbg : black;
+    --Listbg : #ffffff3d;
+    --Border_1 : red;
+    --Border_2 : red;
+    --Danger : red;
   }
 
   ::-webkit-scrollbar {
@@ -9,16 +23,38 @@
   }
 
   body {
-    background-color: black;
+    background-color: var(--bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
     width: 100vw;
+    overflow-x: hidden;
+  }
+
+  #DarK-Light {
+    background-color: var(--bg_2);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 25px;
+    width: 60px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #inBtn {
+    background-color: red;
+    height: 80%;
+    width: 38%;
+    border-radius: 50%;
+    margin: 0 5%;
   }
 
   #Input {
-    border: 2px solid gold;
+    border: 2px solid var(--Border_2);
     width: 80vw;
     display: flex;
     justify-content: space-between;
@@ -43,7 +79,7 @@
     outline: none;
     background-color: transparent;
     border: none;
-    color: white;
+    color: var(--TextWhite);
     font-size: 3vh;
     padding: 0.5em 0.5em;
     letter-spacing: 1px;
@@ -51,14 +87,14 @@
   }
 
   #InputPlaceHolder {
-    background-color: black;
+    background-color: var(--bg);
     position: absolute;
     top: -20%;
-    left: 1vh;
-    border-left: 2px solid gold;
-    border-right: 2px solid gold;
+    left: 5vh;
+    border-left: 2px solid var(--Border_2);
+    border-right: 2px solid var(--Border_2);
     padding: 0 2%;
-    color: rgba(255, 255, 255, 0.478);
+    color: var(--TextListBlk);
     transition: all 0.5s;
   }
   
@@ -69,7 +105,7 @@
   }
 
   #AlertMessage {
-    color: red;
+    color: var(--Danger);
     position: absolute;
     top: 110%;
     left: 10%;
@@ -101,8 +137,8 @@
   }
 
   #List div {
-    background-color: #ffffff80;
-    color: black;
+    background-color: var(--Listbg);
+    color: var(--TextWhite);
     width: 90vw;
     height: 6vh;
     border-radius: 5px;
@@ -112,7 +148,7 @@
     padding: 0 0 0 2vh;
     font-size: 3vh;
     margin-bottom: 10px;
-    border: 2px solid red;
+    border: 2px solid var(--Border_1);
   }
 
   #List label {
@@ -123,7 +159,7 @@
     appearance: none;
     height: 60%;
     width: 4.5vh;
-    background-color: white;
+    background-color: var(--bg_2);
     cursor: pointer;
     border-radius: 20px;
   }
@@ -136,9 +172,8 @@
 
   input[type="checkbox"]:checked + label {
     text-decoration: line-through;
-    text-decoration-color: red;
-    color: rgba(255, 255, 255, 0.311);
-    transition: All 0.5s;
+    text-decoration-color: var(--Danger);
+    color: var(--TextListBlk);
   }
 
   #List div button {
@@ -164,6 +199,11 @@
 
 
   @media (max-width: 750px) {
+    #DarK-Light {
+      height: 15px;
+      width: 40px;
+    }
+
     #List div {
       width: 90vw;
       height: 8vw;
@@ -198,6 +238,6 @@
     }
 
     #InputPlaceHolder {
-      left: 1vw;
+      left: 5vw;
     }
   }
