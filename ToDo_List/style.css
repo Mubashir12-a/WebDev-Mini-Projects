@@ -56,10 +56,12 @@
   #Input {
     border: 2px solid var(--Border_2);
     width: 80vw;
+    min-height: 40px;
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
     position: relative;
+    border-radius: 5px;
   }
 
   #Input button {
@@ -74,7 +76,7 @@
 
   #InputTag {
     width: 90%;
-    height: 8vh;
+    min-height: 40px;
     overflow: hidden;
     outline: none;
     background-color: transparent;
@@ -84,6 +86,8 @@
     padding: 0.5em 0.5em;
     letter-spacing: 1px;
     resize: none;
+    display: flex;
+    align-items: center;
   }
 
   #InputPlaceHolder {
@@ -100,8 +104,8 @@
   
   #countAlpha {
     position: absolute;
-    top: 110%;
-    color: rgba(255, 255, 255, 0.427);
+    top: 101%;
+    color: var(--TextListBlk);
   }
 
   #AlertMessage {
@@ -140,32 +144,41 @@
     background-color: var(--Listbg);
     color: var(--TextWhite);
     width: 90vw;
-    height: 6vh;
+    min-height: 6vh;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 0 0 0 2vh;
     font-size: 3vh;
     margin-bottom: 10px;
     border: 2px solid var(--Border_1);
+    position: relative;
   }
 
   #List label {
+      text-align: justify;
+      overflow: hidden;
+      width: 80%;
+      /* background-color: red; */
       display: flex;
+      margin-left: 30px;
+      padding: 3px;
   }
 
   #List div input[type="checkbox"] {
     appearance: none;
-    height: 60%;
-    width: 4.5vh;
-    background-color: var(--bg_2);
+    height: 20px;
+    width: 20px;
+    border: 1px solid red;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 1%;
   }
 
   #List div input[type="checkbox"]:checked {
-    background: url("https://www.shutterstock.com/image-vector/check-mark-icon-color-editable-600nw-2474013721.jpg");
+    background: url("Images/checkImg.png");
     background-size: cover;
     background-position: center;
   }
@@ -178,18 +191,17 @@
 
   #List div button {
     height: 100%;
-    width: 10vh;
-    margin-right: 2vw;
-    font-size: 5vh;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 10%;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(to right, black 20% , #222222);
     border-radius: 5px;
-    background: url("Del_img.png") no-repeat;
-    background-size: contain;
-    background-position: center;
     cursor: pointer;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2vw;
+    letter-spacing: 2px;
   }
 
   #List div button:active {
@@ -198,7 +210,7 @@
   }
 
 
-  @media (max-width: 750px) {
+  @media (max-width: 500px) {
     #DarK-Light {
       height: 15px;
       width: 40px;
@@ -206,14 +218,8 @@
 
     #List div {
       width: 90vw;
-      height: 8vw;
       padding: 0 0 0 2vw;
       font-size: 4vw;
-    }
-
-    #List div input[type="checkbox"] {
-      height: 60%;
-      width: 5%;
     }
 
     #Input button {
@@ -225,8 +231,16 @@
     }
 
     #List div button {
-      width: 10vw;
-      font-size: 5vw;
+      font-size: 4vw;
+      width: 20%;
+    }
+
+    #List div label {
+      width: 70%;
+    }
+
+    #List div input[type="checkbox"] {
+      left: 2%;
     }
 
     #InputTag {
