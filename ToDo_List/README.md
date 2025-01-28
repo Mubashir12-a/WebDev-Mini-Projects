@@ -33,14 +33,14 @@ A simple and interactive To-Do List application built using **HTML**, **CSS**, a
 
 ## Project Structure
 
-project-directory/
+project-directory/ <br>
 │
 ├── index.html # Main HTML file <br>
-├── styles.css # CSS file for styling 
-├── script.js  # JavaScript for functionality
-├── Sounds/    # All Audio Effects
-├── Images/    # All Images Used In this
-└── README.md  # Project documentation
+├── styles.css # CSS file for styling <br>
+├── script.js  # JavaScript for functionality<br>
+├── Sounds/    # All Audio Effects<br>
+├── Images/    # All Images Used In this<br>
+└── README.md  # Project documentation<br>
 
 ## Future Enhancements
 
