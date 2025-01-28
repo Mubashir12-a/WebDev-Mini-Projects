@@ -34,7 +34,7 @@ A simple and interactive To-Do List application built using **HTML**, **CSS**, a
 ## Project Structure
 
 project-directory/ <br>
-│
+│<br>
 ├── index.html # Main HTML file <br>
 ├── styles.css # CSS file for styling <br>
 ├── script.js  # JavaScript for functionality<br>
