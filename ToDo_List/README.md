@@ -38,7 +38,7 @@ project-directory/ <br>
 ├── index.html # Main HTML file <br>
 ├── styles.css # CSS file for styling <br>
 ├── script.js  # JavaScript for functionality<br>
-├── Sounds/    # All Audio Effects<br>
+├── SoundEff/  # All Audio Effects<br>
 ├── Images/    # All Images Used In this<br>
 └── README.md  # Project documentation<br>
 
